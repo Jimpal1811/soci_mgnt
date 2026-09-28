@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f0f5fb;
+  color: #202224;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Global dark theme. Existing component colors are preserved in light mode. */
+html.dark body,
+body.theme-dark {
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+html.dark .bg-white,
+body.theme-dark .bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-\[\#fff\],
+body.theme-dark .bg-\[\#fff\] {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-\[\#F0F5FB\],
+body.theme-dark .bg-\[\#F0F5FB\] {
+  background-color: #0b1120 !important;
+}
+
+html.dark .bg-gray-100,
+body.theme-dark .bg-gray-100 {
+  background-color: #0b1120 !important;
+}
+
+html.dark .text-gray-900,
+body.theme-dark .text-gray-900,
+html.dark .text-gray-800,
+body.theme-dark .text-gray-800,
+html.dark .text-gray-700,
+body.theme-dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .text-black,
+body.theme-dark .text-black {
+  color: #f3f4f6 !important;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select,
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select {
+  background-color: #182235 !important;
+  color: #f3f4f6 !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder,
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+html.dark .border-gray-200,
+body.theme-dark .border-gray-200,
+html.dark .border-gray-300,
+body.theme-dark .border-gray-300 {
+  border-color: #334155 !important;
+}
+
+.theme-toggle {
+  background: #ffffff;
+  color: #334155;
+  border-color: #e2e8f0;
+}
+
+html.dark .theme-toggle,
+body.theme-dark .theme-toggle {
+  background: #182235;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
